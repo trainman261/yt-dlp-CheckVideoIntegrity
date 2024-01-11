@@ -6,6 +6,4 @@ build-backend = "setuptools.build_meta"
 universal = true
 
 [tool.poetry]
-...
 packages = [{ include = "yt_dlp_plugins" }]
-...
