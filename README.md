@@ -22,3 +22,4 @@ See [installing yt-dlp plugins](https://github.com/yt-dlp/yt-dlp#installing-plug
 ## Development
 
 Python is by far not my best language, don't expect great code - but feel free to improve it! Pull requests are welcome, as mentioned.
+Also, feel free to open issues.
