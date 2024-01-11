@@ -1,11 +1,15 @@
-This repository contains a sample plugin package for [yt-dlp](https://github.com/yt-dlp/yt-dlp#readme). 
+## Check Video Integrity
 
-See [yt-dlp plugins](https://github.com/yt-dlp/yt-dlp#plugins) for more details.
+This is a plugin to check if the video was downloaded successfully. It first checks a number of different fields to check if the length matches the metadata from the site (in my experience this is often a symptom of a download gone wrong). On Windows, it also checks the file duration metadata. Pull requests are welcome for other platforms.
+
+When all the duration checks are complete, it uses ffmpeg to look through the video and search for any signs of corruption.
+
+If there is a problem, it will abort, and yt-dlp will return an error code.
 
 
 ## Installation
 
-Requires yt-dlp `2023.01.02` or above.
+Tested on `2023.11.16`.
 
 You can install this package with pip:
 ```
@@ -17,4 +21,4 @@ See [installing yt-dlp plugins](https://github.com/yt-dlp/yt-dlp#installing-plug
 
 ## Development
 
-See the [Plugin Development](https://github.com/yt-dlp/yt-dlp/wiki/Plugin-Development) section of the yt-dlp wiki.
+Python is by far not my best language, don't expect great code - but feel free to improve it! Pull requests are welcome, as mentioned.
